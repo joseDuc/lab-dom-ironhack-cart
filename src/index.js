@@ -26,7 +26,7 @@ function calculateAll() {
 
   // ITERATION 2
   //... your code goes here
-
+  console.log("calculando todo")
   let suma = 0;
   const total = document.querySelector("#total-value").querySelector("span");
   document.querySelectorAll('.product').forEach((producto) => {
@@ -46,7 +46,8 @@ function removeProduct(event) {
   //... your code goes here
   celda = target.parentNode;
   celda.parentNode.remove();
-  calculateAll;
+
+  calculateAll();
 }
 
 // ITERATION 5
@@ -113,12 +114,12 @@ function createProduct() {
         btn.classList = "btn btn-remove";
         btn.innerText="Remove";
         celda.appendChild(btn);
-        addEventEliminarProducto(fila)
         break;
       default:
         break;
     }
   }
+  addEventEliminarProducto(fila)
 }
 
 
